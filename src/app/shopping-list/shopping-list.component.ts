@@ -13,6 +13,8 @@ export class ShoppingListComponent {
     new Ingredient('Spring Onion', 2),
   ];
 
-
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 
 }
