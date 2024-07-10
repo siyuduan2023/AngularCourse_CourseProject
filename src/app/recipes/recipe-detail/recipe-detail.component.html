@@ -1,3 +1,4 @@
+<div *ngIf="recipe; else notFound">
 <div class="row">
     <div class="col-xs-12">
         <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 300px;">
@@ -34,3 +35,10 @@
         </ul>
     </div>
 </div>
+</div>
+
+<ng-template #notFound>
+    <p class="alert-danger" style="text-align: center">
+      It seems that you requested a recipe which does not exist!
+    </p>
+  <ng-template>
